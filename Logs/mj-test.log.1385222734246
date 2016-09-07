@@ -1,0 +1,12 @@
+INFO  17:05:06,722 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  17:05:06,734 - #2 program
+INFO  17:05:06,735 - #45 Program
+INFO  17:05:06,735 - #5 const
+INFO  17:05:06,735 - #45 int
+INFO  17:05:06,735 - #45 nesto
+INFO  17:05:06,735 - #6 =
+INFO  17:05:06,735 - #41 5
+INFO  17:05:06,736 - #8 ;
+INFO  17:05:06,736 - #3 {
+INFO  17:05:06,736 - #4 }
+INFO  17:05:06,736 - Print calls = 0

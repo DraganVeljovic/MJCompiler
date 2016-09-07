@@ -1,0 +1,30 @@
+INFO  22:00:47,973 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  22:00:47,988 - #2 program
+INFO  22:00:47,988 - #45 Program
+INFO  22:00:47,989 - #5 const
+INFO  22:00:47,989 - #45 int
+INFO  22:00:47,989 - #45 c1
+INFO  22:00:47,989 - #6 =
+INFO  22:00:47,989 - #41 3
+INFO  22:00:47,990 - #7 ,
+INFO  22:00:47,990 - #45 c2
+INFO  22:00:47,990 - #6 =
+INFO  22:00:47,990 - #41 5
+INFO  22:00:47,990 - #8 ;
+INFO  22:00:47,990 - #5 const
+INFO  22:00:47,990 - #45 int
+INFO  22:00:47,991 - #45 c3
+INFO  22:00:47,991 - #6 =
+INFO  22:00:47,991 - #41 7
+INFO  22:00:47,991 - #8 ;
+INFO  22:00:47,991 - #45 int
+INFO  22:00:47,991 - #45 v1
+INFO  22:00:47,991 - #7 ,
+INFO  22:00:47,992 - #45 v2
+ERROR 22:00:47,992 - 
+Sintaksna greska na liniji 6
+ERROR 22:00:47,992 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6
+INFO  22:00:47,992 - Print calls = 0
+INFO  22:00:47,992 - Global var number = 1
+INFO  22:00:47,992 - Global arrays number = 0
+INFO  22:00:47,993 - Object instantiate number = 0

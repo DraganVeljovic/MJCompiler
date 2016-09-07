@@ -1,0 +1,350 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io*;
+
+parser code {:
+
+	boolean globalSection = true;
+	
+	int globalVarCount = 0;
+	int globalArrayCount = 0;
+	
+	int objectInstantiateCount = 0;
+	
+	int printCallCount = 0;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+terminal PROG, LBRACE, RBRACE, CONST, EQUAL, COMMA, SEMI, CLASS, EXTENDS, VOID, IF, WHILE, DO, BREAK, RETURN ;
+terminal LSQBRACE, RSQBRACE, LPAREN, RPAREN, PLUSPLUS, MINUSMINUS, READ, PRINT, PLUS, MINUS, MUL, DIV, MOD  ;
+terminal NEW, DOT, EQ, NEQ, GT, GE, LT, LE, OR, AND, ELSE ;
+terminal Integer NUMBER ;
+terminal Character CHAR;
+terminal Boolean BOOL;
+terminal String STRING;
+terminal String IDENT ;
+
+non terminal Program, ConstDeclList, VarDeclList, ClassDeclList, MethodDeclList, SameTypeConstDeclList ;
+non terminal IdentAssignList, IdentAssign, Type, Value, SingleIdentAssign, SameTypeVarDeclList, VarDecl ;
+non terminal SingleVarDeclList, SingleVarDecl, ClassDecl, MethodDecl, FormPars, StatementList, FormParam ;
+non terminal FormParamList, Statement, Matched, Unmatched, Condition, Designator, Expr, ActPars, CondTerm ;
+non terminal CondFact, Relop, ExprList, Addop, Term, Mulop, Factor, DesignatorAttributes, DesignatorPart ;
+non terminal ReturnTypeIdent, DeclList, DeclPart, ConstDecl, SingleConstDecl, LocalVarList, Array, ClassIdentifier, SuperClass ;
+non terminal DesignatorList, FactorList, TermList, LocalVars, Methods, Statements, MethodsVars, MethodsVarsPart ;
+
+/* Program */
+/* Vezati PROG IDENT u ProgIdent ? */
+Program ::= PROG IDENT DeclList LBRACE MethodDeclList RBRACE ;
+					/* !expression inside braces - new non terminal --- {: parser.globalSection = false; :}*/
+					
+/* DeclList */
+DeclList ::= DeclList DeclPart
+			 |
+			 /* epsilon */
+			 ;
+
+DeclPart ::= ConstDecl
+			 |
+			 VarDecl
+			 |
+			 ClassDecl
+			 ;
+
+/* Const declarations */
+ConstDecl ::= CONST Type ConstDeclList SEMI ;
+
+ConstDeclList ::= ConstDeclList COMMA SingleConstDecl
+				  |
+				  SingleConstDecl
+				  ;
+
+SingleConstDecl	::= IDENT EQUAL Value ;
+
+/* Value */
+Value ::= NUMBER
+		  |
+		  CHAR
+		  |
+		  BOOL
+		  |
+		  STRING
+		  ;
+
+/* Type */
+Type ::= IDENT ;
+
+/* Var declarations */  
+VarDecl ::= Type VarDeclList SEMI ;
+
+VarDeclList ::= VarDeclList COMMA SingleVarDecl
+				|	  
+		  	    SingleVarDecl
+		  	    ;
+			
+SingleVarDecl ::= IDENT LSQBRACE RSQBRACE 
+				  {: if (parser.globalSection) parser.globalArrayCount++; :}
+				  |
+				  IDENT
+				  {: if (parser.globalSection) parser.globalVarCount++; :}
+				  ;
+
+/* Local Variables */				  
+LocalVarList ::= LocalVarList VarDecl
+				 |
+				 /* epsilon */
+				 ;	  	  
+
+/* Class Declarations*/						  
+ClassDecl ::= ClassIdentifier SuperClass LBRACE MethodsVars RBRACE ;
+
+ClassIdentifier ::= CLASS IDENT ;
+
+SuperClass ::= EXTENDS
+			   |
+			   /* epsilon */
+			   ;
+
+MethodsVars ::= MethodsVars MethodsVarsPart
+				|
+				/* epsilon */
+				;
+				
+MethodsVarsPart ::= VarDecl
+					|
+					MethodDecl
+					;
+			    
+/* Method */
+MethodDeclList ::= MethodDeclList MethodDecl
+			|
+			/* epsilon */
+			;
+ 
+MethodDecl ::= Type IDENT LPAREN FormPars RPAREN LocalVarList LBRACE Statements RBRACE
+			   |
+			   VOID IDENT LPAREN FormPars RPAREN LocalVarList LBRACE Statements RBRACE 
+			   ;
+
+ReturnTypeIdent ::= Type IDENT
+					|
+					VOID IDENT
+					;
+			   
+
+/* Formal Parameters */
+FormPars ::= FormParamList 
+			 |
+			 /* epsilon */
+			 ;
+			 
+			 
+FormParamList ::= FormParamList COMMA FormParam
+				  |
+				  FormParam
+				  ;
+				  
+FormParam ::= Type IDENT LSQBRACE RSQBRACE 
+			  |
+			  Type IDENT
+			  ;
+
+/*Statement*/
+Statements ::= StatementList 
+			   |
+			   /* epsilon */
+			   ;
+
+StatementList ::= StatementList Statement 
+				  |
+				  Statement
+				  ;
+
+			  
+Statement ::= Matched 
+			  |
+			  Unmatched
+			  ;
+
+
+Unmatched ::= IF LPAREN Condition RPAREN Statement
+			  |
+			  IF LPAREN Condition RPAREN Matched ELSE Unmatched
+			  |
+			  WHILE LPAREN Condition RPAREN Unmatched
+			  ;
+			  
+
+Matched ::=   Designator EQUAL Expr SEMI 
+			  |
+			  Designator PLUSPLUS SEMI
+			  |
+			  Designator MINUSMINUS SEMI
+			  |
+			  Designator LPAREN ActPars RPAREN SEMI
+			  |
+			  IF LPAREN Condition RPAREN Matched ELSE Matched
+			  |
+			  WHILE LPAREN Condition RPAREN Matched
+			  |
+			  READ LPAREN Designator RPAREN SEMI
+			  |
+			  PRINT LPAREN Expr RPAREN SEMI
+			  |
+			  PRINT LPAREN Expr COMMA NUMBER RPAREN SEMI
+			  |
+			  BREAK SEMI
+			  |
+			  RETURN SEMI
+			  |
+			  RETURN Expr SEMI
+			  |
+			  LBRACE Statements RBRACE
+			  |
+			  DO LBRACE Statements RBRACE WHILE LPAREN Condition RPAREN
+			  ;
+
+			  
+/* Conditions */
+Condition ::= Condition OR CondTerm
+			  |
+			  CondTerm
+			  ;
+
+CondTerm ::= CondTerm AND CondFact
+			 |
+			 CondFact
+			 ;
+			 
+CondFact ::= Expr Relop Expr
+			 |
+			 Expr
+			 ;
+			  
+/* Actual Parameters */
+ActPars ::= ExprList 
+			|
+			/* epsilon */
+			;
+			
+ExprList ::= ExprList COMMA Expr
+			 |
+			 Expr
+			 ;
+
+/* Expression */				 
+Expr ::= TermList ;
+		 
+/* Term */		 
+TermList ::= TermList Addop Term
+			 |
+			 Term
+			 ;
+			 
+Term ::= FactorList ;
+
+FactorList ::= FactorList Mulop Factor
+			   |
+			   Factor
+			   |
+			   MINUS Factor
+			   ;
+		
+/* Factor */		 
+Factor ::= NUMBER
+		   |
+		   CHAR
+		   |
+		   LPAREN Expr RPAREN
+		   |
+		   BOOL
+		   |
+		   NEW Type
+		   {: parser.objectInstantiateCount++; :}
+		   |
+		   NEW Type LSQBRACE Expr RSQBRACE
+		   {: parser.objectInstantiateCount++; :}
+		   |
+		   Designator
+		   |
+		   Designator LPAREN ActPars RPAREN
+		   ;
+
+/* Designator */
+Designator ::= IDENT DesignatorAttributes ;
+
+DesignatorAttributes ::= DesignatorList
+						 |
+						 /* epsilon */
+						 ;
+
+DesignatorList ::= DesignatorList DesignatorPart
+				   |
+				   DesignatorPart
+				   ;
+
+DesignatorPart ::= LSQBRACE Expr RSQBRACE
+				   |
+				   DOT IDENT
+				   ; 
+
+/* Relop */
+Relop ::= EQ
+		  |
+		  NEQ
+		  |
+		  GT
+		  |
+		  GE
+		  |
+		  LT
+		  |
+		  LE
+		  ;
+
+/* Addop */
+Addop ::= PLUS
+		  |
+		  MINUS
+		  ;
+
+/* Mulop */
+Mulop ::= MUL
+		  |
+		  DIV
+		  |
+		  MOD
+		  ;		  

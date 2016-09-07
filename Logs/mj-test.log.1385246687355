@@ -1,0 +1,42 @@
+INFO  23:01:26,488 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  23:01:26,508 - #2 program
+INFO  23:01:26,508 - #45 Program
+INFO  23:01:26,509 - #5 const
+INFO  23:01:26,509 - #45 int
+INFO  23:01:26,510 - #45 c1
+INFO  23:01:26,510 - #6 =
+INFO  23:01:26,510 - #41 3
+INFO  23:01:26,511 - #7 ,
+INFO  23:01:26,511 - #45 c2
+INFO  23:01:26,511 - #6 =
+INFO  23:01:26,511 - #41 5
+INFO  23:01:26,512 - #8 ;
+INFO  23:01:26,512 - #5 const
+INFO  23:01:26,512 - #45 int
+INFO  23:01:26,512 - #45 c3
+INFO  23:01:26,513 - #6 =
+INFO  23:01:26,513 - #41 7
+INFO  23:01:26,513 - #8 ;
+INFO  23:01:26,513 - #45 int
+INFO  23:01:26,514 - #45 v1
+INFO  23:01:26,514 - #7 ,
+INFO  23:01:26,514 - #45 v2
+INFO  23:01:26,515 - #8 ;
+INFO  23:01:26,515 - #45 int
+INFO  23:01:26,515 - #45 v3
+INFO  23:01:26,515 - #8 ;
+INFO  23:01:26,515 - #45 int
+INFO  23:01:26,515 - #45 vniz1
+INFO  23:01:26,516 - #17 [
+INFO  23:01:26,516 - #18 ]
+INFO  23:01:26,516 - #8 ;
+INFO  23:01:26,516 - #9 class
+INFO  23:01:26,516 - #45 A
+INFO  23:01:26,516 - #3 {
+INFO  23:01:26,517 - #4 }
+INFO  23:01:26,517 - #3 {
+INFO  23:01:26,517 - #4 }
+INFO  23:01:26,517 - Print calls = 0
+INFO  23:01:26,517 - Global var number = 3
+INFO  23:01:26,518 - Global arrays number = 1
+INFO  23:01:26,518 - Object instantiate number = 0

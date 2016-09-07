@@ -1,0 +1,29 @@
+program Program
+
+const int c1 = 3, c2 = 5;
+const int c3 = 7;
+const char c4 = 'c';
+const String c5 = "String";
+const bool c6 = true;
+
+int v1, v2;
+int v3;
+char v4;
+string v5;
+
+int vniz1[], vniz2[];
+char vniz3[];
+
+class A {
+int x;
+bool t;
+char c;
+}
+
+class B extends A {
+string s;
+void m () {}
+}
+
+{
+}

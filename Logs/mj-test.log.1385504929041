@@ -1,0 +1,43 @@
+INFO  23:28:13,755 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  23:28:13,775 - #2 program
+INFO  23:28:13,775 - #45 Program
+INFO  23:28:13,775 - #5 const
+INFO  23:28:13,775 - #45 int
+INFO  23:28:13,775 - #45 c1
+INFO  23:28:13,775 - #6 =
+INFO  23:28:13,775 - #41 3
+INFO  23:28:13,775 - #7 ,
+INFO  23:28:13,775 - #45 c2
+INFO  23:28:13,775 - #6 =
+INFO  23:28:13,775 - #41 5
+INFO  23:28:13,775 - #8 ;
+INFO  23:28:13,775 - #5 const
+INFO  23:28:13,775 - #45 int
+INFO  23:28:13,775 - #45 c3
+INFO  23:28:13,775 - #6 =
+INFO  23:28:13,775 - #41 7
+INFO  23:28:13,775 - #8 ;
+INFO  23:28:13,775 - #45 int
+INFO  23:28:13,775 - #45 v1
+INFO  23:28:13,775 - #7 ,
+INFO  23:28:13,775 - #45 v2
+INFO  23:28:13,775 - #8 ;
+INFO  23:28:13,775 - #45 int
+INFO  23:28:13,775 - #45 v3
+INFO  23:28:13,775 - #8 ;
+INFO  23:28:13,775 - #45 int
+INFO  23:28:13,775 - #45 vniz1
+INFO  23:28:13,775 - #17 [
+INFO  23:28:13,775 - #18 ]
+INFO  23:28:13,775 - #8 ;
+INFO  23:28:13,775 - #9 class
+INFO  23:28:13,775 - #45 A
+INFO  23:28:13,775 - #3 {
+INFO  23:28:13,775 - #45 int
+ERROR 23:28:13,775 - 
+Sintaksna greska na liniji 12
+ERROR 23:28:13,775 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 12
+INFO  23:28:13,775 - Print calls = 0
+INFO  23:28:13,775 - Global var number = 3
+INFO  23:28:13,785 - Global arrays number = 1
+INFO  23:28:13,785 - Object instantiate number = 0

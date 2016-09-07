@@ -1,0 +1,44 @@
+INFO  23:46:18,860 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  23:46:18,880 - #2 program
+INFO  23:46:18,880 - #45 Program
+INFO  23:46:18,880 - #5 const
+INFO  23:46:18,880 - #45 int
+INFO  23:46:18,880 - #45 c1
+INFO  23:46:18,880 - #6 =
+INFO  23:46:18,880 - #41 3
+INFO  23:46:18,880 - #7 ,
+INFO  23:46:18,880 - #45 c2
+INFO  23:46:18,880 - #6 =
+INFO  23:46:18,880 - #41 5
+INFO  23:46:18,880 - #8 ;
+INFO  23:46:18,880 - #5 const
+INFO  23:46:18,880 - #45 int
+INFO  23:46:18,880 - #45 c3
+INFO  23:46:18,880 - #6 =
+INFO  23:46:18,880 - #41 7
+INFO  23:46:18,880 - #8 ;
+INFO  23:46:18,880 - #45 int
+INFO  23:46:18,880 - #45 v1
+INFO  23:46:18,880 - #7 ,
+INFO  23:46:18,880 - #45 v2
+INFO  23:46:18,880 - #8 ;
+INFO  23:46:18,880 - #45 int
+INFO  23:46:18,880 - #45 v3
+INFO  23:46:18,880 - #8 ;
+INFO  23:46:18,880 - #45 int
+INFO  23:46:18,880 - #45 vniz1
+INFO  23:46:18,880 - #17 [
+INFO  23:46:18,880 - #18 ]
+INFO  23:46:18,880 - #8 ;
+INFO  23:46:18,880 - #9 class
+INFO  23:46:18,880 - #45 A
+INFO  23:46:18,880 - #3 {
+INFO  23:46:18,880 - #45 int
+INFO  23:46:18,880 - #45 x
+INFO  23:46:18,880 - #8 ;
+INFO  23:46:18,880 - #45 int
+INFO  23:46:18,880 - #19 (
+ERROR 23:46:18,880 - 
+Sintaksna greska na liniji 13
+ERROR 23:46:18,880 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13
+INFO  23:46:18,880 - Print calls = 0

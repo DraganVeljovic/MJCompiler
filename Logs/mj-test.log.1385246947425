@@ -1,0 +1,48 @@
+INFO  23:49:02,046 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  23:49:02,061 - #2 program
+INFO  23:49:02,061 - #45 Program
+INFO  23:49:02,061 - #5 const
+INFO  23:49:02,061 - #45 int
+INFO  23:49:02,061 - #45 c1
+INFO  23:49:02,061 - #6 =
+INFO  23:49:02,062 - #41 3
+INFO  23:49:02,062 - #7 ,
+INFO  23:49:02,062 - #45 c2
+INFO  23:49:02,062 - #6 =
+INFO  23:49:02,062 - #41 5
+INFO  23:49:02,062 - #8 ;
+INFO  23:49:02,062 - #5 const
+INFO  23:49:02,063 - #45 int
+INFO  23:49:02,063 - #45 c3
+INFO  23:49:02,063 - #6 =
+INFO  23:49:02,063 - #41 7
+INFO  23:49:02,063 - #8 ;
+INFO  23:49:02,063 - #45 int
+INFO  23:49:02,063 - #45 v1
+INFO  23:49:02,063 - #7 ,
+INFO  23:49:02,064 - #45 v2
+INFO  23:49:02,064 - #8 ;
+INFO  23:49:02,064 - #45 int
+INFO  23:49:02,064 - #45 v3
+INFO  23:49:02,064 - #8 ;
+INFO  23:49:02,064 - #45 int
+INFO  23:49:02,064 - #45 vniz1
+INFO  23:49:02,064 - #17 [
+INFO  23:49:02,065 - #18 ]
+INFO  23:49:02,065 - #8 ;
+INFO  23:49:02,065 - #9 class
+INFO  23:49:02,065 - #45 A
+INFO  23:49:02,065 - #3 {
+INFO  23:49:02,065 - #45 int
+INFO  23:49:02,065 - #45 x
+INFO  23:49:02,065 - #8 ;
+INFO  23:49:02,066 - #45 int
+INFO  23:49:02,066 - #45 m1
+INFO  23:49:02,066 - #19 (
+ERROR 23:49:02,066 - 
+Sintaksna greska na liniji 13
+ERROR 23:49:02,066 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13
+INFO  23:49:02,066 - Print calls = 0
+INFO  23:49:02,066 - Global var number = 4
+INFO  23:49:02,066 - Global arrays number = 1
+INFO  23:49:02,066 - Object instantiate number = 0

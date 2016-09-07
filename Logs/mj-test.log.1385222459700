@@ -1,0 +1,6 @@
+INFO  16:56:51,729 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  16:56:51,741 - #9 class
+ERROR 16:56:51,741 - 
+Sintaksna greska na liniji 1
+ERROR 16:56:51,741 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 1
+INFO  16:56:51,741 - Print calls = 0

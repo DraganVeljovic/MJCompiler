@@ -1,0 +1,45 @@
+INFO  20:42:45,024 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  20:42:45,043 - #2 program
+INFO  20:42:45,043 - #45 Program
+INFO  20:42:45,043 - #5 const
+INFO  20:42:45,043 - #45 int
+INFO  20:42:45,043 - #45 c1
+INFO  20:42:45,043 - #6 =
+INFO  20:42:45,044 - #41 3
+INFO  20:42:45,044 - #7 ,
+INFO  20:42:45,044 - #45 c2
+INFO  20:42:45,044 - #6 =
+INFO  20:42:45,044 - #41 5
+INFO  20:42:45,044 - #8 ;
+INFO  20:42:45,045 - #5 const
+INFO  20:42:45,045 - #45 int
+INFO  20:42:45,045 - #45 c3
+INFO  20:42:45,045 - #6 =
+INFO  20:42:45,045 - #41 7
+INFO  20:42:45,045 - #8 ;
+INFO  20:42:45,045 - #45 int
+INFO  20:42:45,045 - #45 v1
+INFO  20:42:45,046 - #7 ,
+INFO  20:42:45,046 - #45 v2
+INFO  20:42:45,046 - #8 ;
+INFO  20:42:45,046 - #45 int
+INFO  20:42:45,046 - #45 v3
+INFO  20:42:45,046 - #8 ;
+INFO  20:42:45,046 - #45 int
+INFO  20:42:45,046 - #45 vniz1
+INFO  20:42:45,047 - #17 [
+INFO  20:42:45,047 - #18 ]
+INFO  20:42:45,047 - #8 ;
+INFO  20:42:45,047 - #9 class
+INFO  20:42:45,047 - #45 A
+INFO  20:42:45,047 - #3 {
+INFO  20:42:45,047 - #4 }
+INFO  20:42:45,047 - #3 {
+INFO  20:42:45,047 - #11 void
+ERROR 20:42:45,047 - 
+Sintaksna greska na liniji 15
+ERROR 20:42:45,048 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 15
+INFO  20:42:45,048 - Print calls = 0
+INFO  20:42:45,048 - Global var number = 3
+INFO  20:42:45,048 - Global arrays number = 1
+INFO  20:42:45,048 - Object instantiate number = 0

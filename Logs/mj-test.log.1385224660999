@@ -1,0 +1,33 @@
+INFO  17:11:07,563 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  17:11:07,575 - #2 program
+INFO  17:11:07,576 - #45 Program
+INFO  17:11:07,576 - #5 const
+INFO  17:11:07,576 - #45 int
+INFO  17:11:07,576 - #45 c1
+INFO  17:11:07,576 - #6 =
+INFO  17:11:07,576 - #41 3
+INFO  17:11:07,577 - #7 ,
+INFO  17:11:07,577 - #45 c2
+INFO  17:11:07,577 - #6 =
+INFO  17:11:07,577 - #41 5
+INFO  17:11:07,577 - #8 ;
+INFO  17:11:07,577 - #5 const
+INFO  17:11:07,577 - #45 int
+INFO  17:11:07,577 - #45 c3
+INFO  17:11:07,578 - #6 =
+INFO  17:11:07,578 - #41 7
+INFO  17:11:07,578 - #8 ;
+INFO  17:11:07,578 - #45 int
+INFO  17:11:07,578 - #45 v1
+INFO  17:11:07,578 - #7 ,
+INFO  17:11:07,578 - #45 v2
+INFO  17:11:07,579 - #8 ;
+INFO  17:11:07,579 - #45 int
+INFO  17:11:07,579 - #45 v3
+INFO  17:11:07,579 - #8 ;
+INFO  17:11:07,579 - #3 {
+INFO  17:11:07,580 - #11 void
+ERROR 17:11:07,580 - 
+Sintaksna greska na liniji 10
+ERROR 17:11:07,580 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 10
+INFO  17:11:07,580 - Print calls = 0

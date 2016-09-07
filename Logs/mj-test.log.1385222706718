@@ -1,0 +1,13 @@
+INFO  17:04:15,717 - Compiling source file: D:\Dragan\ETF IV\Programski Prevodioci 1\Domaci\MJCompiler\test\program.mj
+INFO  17:04:15,729 - #2 program
+INFO  17:04:15,729 - #45 Program
+INFO  17:04:15,729 - #5 const
+INFO  17:04:15,729 - #45 int
+INFO  17:04:15,729 - #45 nesto
+INFO  17:04:15,729 - #6 =
+INFO  17:04:15,730 - #41 5
+INFO  17:04:15,730 - #8 ;
+ERROR 17:04:15,730 - 
+Sintaksna greska na liniji 3
+ERROR 17:04:15,730 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3
+INFO  17:04:15,730 - Print calls = 0
